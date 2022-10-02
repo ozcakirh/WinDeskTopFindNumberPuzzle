@@ -17,7 +17,6 @@ namespace WinDeskTopFindNumberPuzzle
 
         private int oTahminEdilecekSayi = 0;
 
-
         private int oSayiUret
         {
             set
@@ -35,7 +34,6 @@ namespace WinDeskTopFindNumberPuzzle
 
 
         }
-
 
         public Color oBackColor
         {
@@ -126,6 +124,16 @@ namespace WinDeskTopFindNumberPuzzle
         {
             try
             {
+                if (otxtIstenenSayi.Enabled)
+                {
+                    return new CevaplamaMesaji()
+                    {
+                        VerilenCevap = eSonucCevap.Yok,
+                        VerilenMesaj = String.Format("Yarışmamız Şu An Kapalı.")
+                    };
+
+                }
+
                 if (oTahminEdilecekSayi == CevapSayim)
                 {
                     return new CevaplamaMesaji() { VerilenCevap = eSonucCevap.Buldun, 

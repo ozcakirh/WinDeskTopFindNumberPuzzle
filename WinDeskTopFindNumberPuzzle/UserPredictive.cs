@@ -93,6 +93,17 @@ namespace WinDeskTopFindNumberPuzzle
             }
         }
 
+        private string MesajYazSayiniSoyle
+        {
+            set
+            {
+                // olistboxCevaplar.Items.Insert(0, string.Format("{0} : {1}", DateTime.Now.ToLongTimeString(), value));
+                olblKonusmam.Text = value;
+
+                Application.DoEvents();
+            }
+        }
+
         private int SunucuEnBuyukSayi
         {
             get
@@ -123,8 +134,7 @@ namespace WinDeskTopFindNumberPuzzle
                 MesajYaz = "Düşünüyorum";
 
                 int TahminSayim = 0;
-
-                
+               
 
                 if (oradio_RastGele.Checked)
                 {
@@ -188,15 +198,37 @@ namespace WinDeskTopFindNumberPuzzle
 
                 MesajYaz = String.Format("Cevap Veriyorum : Bence, {0} ", Tahmin_Son);
 
+                MesajYazSayiniSoyle = String.Format("{0} , Denemem deki Cevabım : {1} ", DenemeSayim,Tahmin_Son);
+
                 DenemeSayim++;
 
                 CevaplamaMesaji Sonuc =  ((ICevapTrafigiSorana)oSunucu).Cevabim(BenimAdim, DenemeSayim, Tahmin_Son);
 
+                if (Sonuc.VerilenCevap == eSonucCevap.Yok)
+                {
+                    tmrCevaplayici.Enabled = false;
+
+                    MesajYaz = String.Format("Yarışma Kapalıymış", Sonuc.VerilenMesaj);
+
+                    DenemeSayim = 0;
+
+                    BtnStart.Text = "Başla";
+
+                    TahmninSonCevap = Sonuc.VerilenCevap;
+
+                    return;
+
+                }
+
                 if (Sonuc.VerilenCevap == eSonucCevap.Buldun)
                 {
+                    tmrCevaplayici.Enabled = false;
+
                     MesajYaz = String.Format("Helal bana, Buldum: <{0}>", Sonuc.VerilenMesaj);
 
                     TahmninSonCevap = Sonuc.VerilenCevap;
+
+                    BtnStart.Text = "Başla";
 
                     return;
                 }
@@ -248,6 +280,31 @@ namespace WinDeskTopFindNumberPuzzle
             Tahmin_UretilenEnKucuk = 0;
 
             Tahmin_UretilenEnBuyuk = SunucuEnBuyukSayi;
+        }
+
+        private void BtnStart_Click(object sender, EventArgs e)
+        {
+            //
+            if (BtnStart.Text != "Başla")
+            {
+                tmrCevaplayici.Enabled = false;
+
+                BtnStart.Text = "Başla";
+
+                return;
+
+            }
+            tmrCevaplayici.Interval = 1500;
+
+            tmrCevaplayici.Enabled = true;
+
+            BtnStart.Text = "Dur";
+        }
+
+        private void tmrCevaplayici_Tick(object sender, EventArgs e)
+        {
+            // olblKonusmam_DoubleClick(sender, e);
+            Cevapla();
         }
     }
 }

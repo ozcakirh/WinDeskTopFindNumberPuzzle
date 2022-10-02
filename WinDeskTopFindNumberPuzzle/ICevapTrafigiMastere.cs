@@ -22,5 +22,5 @@ namespace WinDeskTopFindNumberPuzzle
         public string VerilenMesaj { set; get; }
     }
 
-    public enum eSonucCevap { SayinizKucuk, SayinizBuyuk, HataVar , Buldun}
+    public enum eSonucCevap { SayinizKucuk, SayinizBuyuk, HataVar , Buldun, Yok}
 }

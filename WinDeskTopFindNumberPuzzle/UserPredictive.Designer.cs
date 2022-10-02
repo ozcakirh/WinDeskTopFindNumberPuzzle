@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.olblAdim = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.olblKonusmam = new System.Windows.Forms.Label();
             this.olistboxCevaplar = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ochk_A_Modeli = new System.Windows.Forms.CheckBox();
             this.oradio_Kurnazlik = new System.Windows.Forms.RadioButton();
             this.oradio_RastGele = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.ochk_A_Modeli = new System.Windows.Forms.CheckBox();
+            this.BtnStart = new System.Windows.Forms.Button();
+            this.tmrCevaplayici = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +105,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.BtnStart);
             this.panel2.Controls.Add(this.ochk_A_Modeli);
             this.panel2.Controls.Add(this.oradio_Kurnazlik);
             this.panel2.Controls.Add(this.oradio_RastGele);
@@ -111,6 +115,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(574, 46);
             this.panel2.TabIndex = 4;
+            // 
+            // ochk_A_Modeli
+            // 
+            this.ochk_A_Modeli.AutoSize = true;
+            this.ochk_A_Modeli.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ochk_A_Modeli.Location = new System.Drawing.Point(297, 0);
+            this.ochk_A_Modeli.Name = "ochk_A_Modeli";
+            this.ochk_A_Modeli.Size = new System.Drawing.Size(277, 46);
+            this.ochk_A_Modeli.TabIndex = 3;
+            this.ochk_A_Modeli.Text = "Kurnazlıkta A Modeli Kullan";
+            this.ochk_A_Modeli.UseVisualStyleBackColor = true;
             // 
             // oradio_Kurnazlik
             // 
@@ -152,16 +167,20 @@
             this.label2.Text = "Çözüm Şekli";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ochk_A_Modeli
+            // BtnStart
             // 
-            this.ochk_A_Modeli.AutoSize = true;
-            this.ochk_A_Modeli.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ochk_A_Modeli.Location = new System.Drawing.Point(297, 0);
-            this.ochk_A_Modeli.Name = "ochk_A_Modeli";
-            this.ochk_A_Modeli.Size = new System.Drawing.Size(277, 46);
-            this.ochk_A_Modeli.TabIndex = 3;
-            this.ochk_A_Modeli.Text = "Kurnazlıkta A Modeli Kullan";
-            this.ochk_A_Modeli.UseVisualStyleBackColor = true;
+            this.BtnStart.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnStart.Location = new System.Drawing.Point(487, 0);
+            this.BtnStart.Name = "BtnStart";
+            this.BtnStart.Size = new System.Drawing.Size(87, 46);
+            this.BtnStart.TabIndex = 4;
+            this.BtnStart.Text = "Başla";
+            this.BtnStart.UseVisualStyleBackColor = true;
+            this.BtnStart.Click += new System.EventHandler(this.BtnStart_Click);
+            // 
+            // tmrCevaplayici
+            // 
+            this.tmrCevaplayici.Tick += new System.EventHandler(this.tmrCevaplayici_Tick);
             // 
             // UserPredictive
             // 
@@ -194,5 +213,7 @@
         private System.Windows.Forms.RadioButton oradio_RastGele;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox ochk_A_Modeli;
+        private System.Windows.Forms.Button BtnStart;
+        private System.Windows.Forms.Timer tmrCevaplayici;
     }
 }
