@@ -36,7 +36,7 @@
             // 
             this.YarismaSunucusu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.YarismaSunucusu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.YarismaSunucusu.Location = new System.Drawing.Point(167, 40);
+            this.YarismaSunucusu.Location = new System.Drawing.Point(338, 30);
             this.YarismaSunucusu.Margin = new System.Windows.Forms.Padding(4);
             this.YarismaSunucusu.Name = "YarismaSunucusu";
             this.YarismaSunucusu.oBackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -50,7 +50,7 @@
             this.Yarismaci_1.Location = new System.Drawing.Point(13, 251);
             this.Yarismaci_1.Margin = new System.Windows.Forms.Padding(4);
             this.Yarismaci_1.Name = "Yarismaci_1";
-            this.Yarismaci_1.Size = new System.Drawing.Size(616, 318);
+            this.Yarismaci_1.Size = new System.Drawing.Size(574, 318);
             this.Yarismaci_1.TabIndex = 1;
             // 
             // FrmHCNumberPuzzleMain

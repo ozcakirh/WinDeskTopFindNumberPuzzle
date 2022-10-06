@@ -63,10 +63,10 @@
             this.olblAdim.Location = new System.Drawing.Point(92, 0);
             this.olblAdim.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.olblAdim.Name = "olblAdim";
-            this.olblAdim.Size = new System.Drawing.Size(482, 31);
+            this.olblAdim.Size = new System.Drawing.Size(480, 31);
             this.olblAdim.TabIndex = 0;
             this.olblAdim.Text = "Benim Adım :";
-            this.olblAdim.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.olblAdim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.olblAdim.DoubleClick += new System.EventHandler(this.olblAdim_DoubleClick);
             // 
             // panel1
@@ -76,7 +76,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(574, 31);
+            this.panel1.Size = new System.Drawing.Size(572, 31);
             this.panel1.TabIndex = 1;
             // 
             // olblKonusmam
@@ -86,7 +86,7 @@
             this.olblKonusmam.Location = new System.Drawing.Point(0, 31);
             this.olblKonusmam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.olblKonusmam.Name = "olblKonusmam";
-            this.olblKonusmam.Size = new System.Drawing.Size(574, 31);
+            this.olblKonusmam.Size = new System.Drawing.Size(572, 31);
             this.olblKonusmam.TabIndex = 2;
             this.olblKonusmam.Text = "Benim Adım :";
             this.olblKonusmam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,7 +100,7 @@
             this.olistboxCevaplar.ItemHeight = 16;
             this.olistboxCevaplar.Location = new System.Drawing.Point(0, 108);
             this.olistboxCevaplar.Name = "olistboxCevaplar";
-            this.olistboxCevaplar.Size = new System.Drawing.Size(574, 210);
+            this.olistboxCevaplar.Size = new System.Drawing.Size(572, 208);
             this.olistboxCevaplar.TabIndex = 3;
             // 
             // panel2
@@ -113,7 +113,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(574, 46);
+            this.panel2.Size = new System.Drawing.Size(572, 46);
             this.panel2.TabIndex = 4;
             // 
             // ochk_A_Modeli
@@ -122,7 +122,7 @@
             this.ochk_A_Modeli.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ochk_A_Modeli.Location = new System.Drawing.Point(297, 0);
             this.ochk_A_Modeli.Name = "ochk_A_Modeli";
-            this.ochk_A_Modeli.Size = new System.Drawing.Size(277, 46);
+            this.ochk_A_Modeli.Size = new System.Drawing.Size(275, 46);
             this.ochk_A_Modeli.TabIndex = 3;
             this.ochk_A_Modeli.Text = "Kurnazlıkta A Modeli Kullan";
             this.ochk_A_Modeli.UseVisualStyleBackColor = true;
@@ -170,7 +170,7 @@
             // BtnStart
             // 
             this.BtnStart.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BtnStart.Location = new System.Drawing.Point(487, 0);
+            this.BtnStart.Location = new System.Drawing.Point(485, 0);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.Size = new System.Drawing.Size(87, 46);
             this.BtnStart.TabIndex = 4;
@@ -186,6 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.olistboxCevaplar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.olblKonusmam);
@@ -193,7 +194,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserPredictive";
-            this.Size = new System.Drawing.Size(574, 318);
+            this.Size = new System.Drawing.Size(572, 316);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
